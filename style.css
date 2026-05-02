@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.link1 { color: #7C4EE4 !important; }
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.btn1{
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+    color: #7C4EE4;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn1:hover{ transform: scale(1.05); }
+ .btn,.btn2, .btn3 {
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    background-color: #7C4EE4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn,.btn2:hover, .btn3:hover { transform: scale(1.05); }
+
+/* --- Hero Section --- */
+.parent {
+    background-color: #7C4EE4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 30px;
+    color: white;
+}
+.nasted{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.leftcontainer { flex: 1; min-width: 300px; }
+.rightcontainer { flex: 1; text-align: center; min-width: 300px; }
+
+.img { width: 100%; max-width: 350px; transition: 0.3s; }
+.img:hover { transform: scale(1.05); }
+
+/* --- About Overlap Fix --- */
+.mean {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.img2 {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.container1 {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-top: -50px; /* Overlap effect */
+    text-align: center;
+}
+
+/* --- Section Headers --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+/* --- Recent Post --- */
+.parent1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.child1, .child2 { flex: 1; min-width: 300px; }
+.img3 { width: 100%; border-radius: 10px; }
+
+/* --- Cards --- */
+.postcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.card:hover { transform: translateY(-10px); }
+.post { width: 100%; border-radius: 8px; }
+
+/* --- Contact Section --- */
+.contect {
+    background-color: #7C4EE4;
+    margin: 50px 20px;
+    padding: 50px 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.input-contect {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.contect-btn {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- MEDIA QUERIES (Mobile Responsiveness) --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    #searchInput{
+    position: static;
+    width: 80%;
+    margin-top: 10px;
+    padding: 12px;
+    display: none;
+}
+    .parent{
+        margin-bottom: 20px;
+    }
+   .leftcontainer{
+    padding-bottom: 30px;
+   }
+   .nasted{
+    padding: 10px;
+   }
+
+    .nav-links.active { display: flex; }
+
+    .parent { text-align: center; }
+    .container1 { margin-top: 20px; position: static; width: 100%; }
+    
+    .heading { font-size: 1.8rem; }
+}
+
+.search-box{
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#searchInput{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding: 10px;
+    width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    display: none;
+}
